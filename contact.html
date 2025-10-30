@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Omas Labs</title>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <link rel="icon" type="image/svg+xml" href="/hero.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              darkgreen: "#062018",
+              limegreen: "#a6ff00",
+              softwhite: "#e6ffee",
+            },
+            boxShadow: {
+              "lime-glow": "0 8px 30px rgba(166,255,0,0.12)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .circuit-bg {
+        background-image: radial-gradient(
+            circle at 10% 10%,
+            rgba(166, 255, 0, 0.03),
+            transparent 10%
+          ),
+          linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.02) 0.5px,
+            transparent 0.5px
+          );
+        background-size: 240px 240px, 8px 8px;
+      }
+    </style>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body class="antialiased bg-darkgreen text-softwhite min-h-screen circuit-bg">
+    <!-- NAV -->
+    <header
+      class="sticky top-0 z-40 backdrop-blur-sm bg-darkgreen/60 border-b border-darkgreen/40"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <a href="#" class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-md bg-gradient-to-br from-darkgreen/80 to-limegreen p-1 shadow-lime-glow flex items-center justify-center"
+          >
+            <!-- simple logo mark -->
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden
+            >
+              <rect x="3" y="3" width="18" height="18" rx="4" fill="#001b12" />
+              <path
+                d="M7 13 L11 9 L17 15"
+                stroke="#a6ff00"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <span class="font-semibold tracking-tight">Omas</span>
+        </a>
+
+        <nav
+          class="hidden md:flex gap-6 transition-all duration-300 ease-out hover:scale-[1.02] items-center text-sm"
+        >
+          <a href="/index.html#services" class="hover:text-limegreen transition"
+            >Services</a
+          >
+          <a href="/courses.html" class="hover:text-limegreen transition"
+            >Courses</a
+          >
+          <a
+            href="/index.html#portfolio"
+            class="hover:text-limegreen transition"
+            >Portfolio</a
+          >
+          <a href="/about.html" class="hover:text-limegreen transition"
+            >About</a
+          >
+          <a href="/contact.html" class="hover:text-limegreen transition"
+            >Contact</a
+          >
+          <a
+            href="/enroll.html"
+            class="ml-2 px-3 py-1 rounded-md bg-limegreen/7 hover:bg-limegreen/15 text-limegreen border border-limegreen/20"
+            >Enroll</a
+          >
+        </nav>
+
+        <div class="md:hidden">
+          <button
+            id="menuBtn"
+            class="p-2 rounded-md ring-1 ring-transparent hover:ring-limegreen/30"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M4 7h16M4 12h16M4 17h16"
+                stroke="#cfeedb"
+                stroke-width="1.6"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobileMenu"
+      class="md:hidden hidden bg-darkgreen/95 border-b border-darkgreen/40"
+    >
+      <div class="px-6 py-4 space-y-3">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="about.html">About</a>
+        <a href="enroll.html">Enroll</a>
+        <a href="contact.html" class="text-limegreen">Contact</a>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <main class="max-w-5xl mx-auto px-6 py-16 space-y-12">
+      <header class="text-center mb-10">
+        <h1 class="text-4xl font-extrabold mb-3">Get in Touch</h1>
+        <p class="text-slate-300/80 max-w-2xl mx-auto">
+          Whether you’re ready to enroll, partner with us, or just curious about
+          what we do — we’d love to hear from you. Reach out through any of the
+          channels below.
+        </p>
+      </header>
+
+      <section class="grid sm:grid-cols-2 gap-8">
+        <a
+          href="https://wa.me/2348172783838"
+          target="_blank"
+          class="flex items-start gap-4 p-6 transition-all duration-300 ease-out hover:scale-[1.02] bg-darkgreen/60 border border-darkgreen/30 rounded-xl hover:shadow-lime-glow transition"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8 text-limegreen"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M20 12a8 8 0 11-15.97-1.26L3 20l9-2a8 8 0 008-6z"
+            />
+          </svg>
+          <div>
+            <h3 class="text-lg font-semibold text-limegreen">WhatsApp</h3>
+            <p class="text-slate-300/80">
+              Chat directly with our team on WhatsApp.
+            </p>
+            <p class="mt-1 text-sm text-slate-400">+234 817 278 3838</p>
+          </div>
+        </a>
+
+        <a
+          href="mailto:customercare@omatraining.com"
+          class="flex items-start gap-4 p-6 transition-all duration-300 ease-out hover:scale-[1.02] bg-darkgreen/60 border border-darkgreen/30 rounded-xl hover:shadow-lime-glow transition"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8 text-limegreen"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 8l9 6 9-6"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 8v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8"
+            />
+          </svg>
+          <div>
+            <h3 class="text-lg font-semibold text-limegreen">Email</h3>
+            <p class="text-slate-300/80">
+              Send us an email and we’ll respond within a day.
+            </p>
+            <p class="mt-1 text-sm text-slate-400">
+              customercare@omatraining.com
+            </p>
+          </div>
+        </a>
+
+        <a
+          href="https://instagram.com/oma_training"
+          target="_blank"
+          class="flex items-start gap-4 p-6 transition-all duration-300 ease-out hover:scale-[1.02] bg-darkgreen/60 border border-darkgreen/30 rounded-xl hover:shadow-lime-glow transition"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8 text-limegreen"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <rect width="18" height="18" x="3" y="3" rx="4" ry="4" />
+            <circle cx="12" cy="12" r="3.2" />
+            <path d="M16.8 7.2h0" />
+          </svg>
+          <div>
+            <h3 class="text-lg font-semibold text-limegreen">Instagram</h3>
+            <p class="text-slate-300/80">
+              Follow us for updates, photos, and training highlights.
+            </p>
+            <p class="mt-1 text-sm text-slate-400">@oma_training</p>
+          </div>
+        </a>
+
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=155+Allen+Avenue,+Ikeja,+Lagos"
+          target="_blank"
+          class="flex items-start gap-4 p-6 transition-all duration-300 ease-out hover:scale-[1.02] bg-darkgreen/60 border border-darkgreen/30 rounded-xl hover:shadow-lime-glow transition"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8 text-limegreen"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 22s8-8.5 8-13a8 8 0 10-16 0c0 4.5 8 13 8 13z"
+            />
+          </svg>
+          <div>
+            <h3 class="text-lg font-semibold text-limegreen">Location</h3>
+            <p class="text-slate-300/80">
+              Visit our training center for in-person sessions.
+            </p>
+            <p class="mt-1 text-sm text-slate-400">
+              155, Allen Avenue, Ikeja, Lagos
+            </p>
+          </div>
+        </a>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-darkgreen/30 py-8 mt-12">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <div class="text-sm text-slate-300/70">
+          &copy; <span id="year"></span> Omas Labs — Practical Tech Training &
+          Systems
+        </div>
+        <div class="text-sm text-slate-300/70">
+          Built with care. Fueled by curiosity.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuBtn?.addEventListener("click", () =>
+        mobileMenu.classList.toggle("hidden")
+      );
+    </script>
+    <script>
+      AOS.init({
+        duration: 700,
+        once: true,
+        easing: "ease-out-cubic",
+      });
+    </script>
+  </body>
+</html>

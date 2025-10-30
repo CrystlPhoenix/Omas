@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Enroll — Omas Labs</title>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <link rel="icon" type="image/svg+xml" href="/hero.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              darkgreen: "#062018",
+              limegreen: "#a6ff00",
+              softwhite: "#e6ffee",
+            },
+            boxShadow: {
+              "lime-glow": "0 8px 30px rgba(166,255,0,0.12)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .circuit-bg {
+        background-image: radial-gradient(
+            circle at 10% 10%,
+            rgba(166, 255, 0, 0.03),
+            transparent 10%
+          ),
+          linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.02) 0.5px,
+            transparent 0.5px
+          );
+        background-size: 240px 240px, 8px 8px;
+      }
+    </style>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body class="antialiased bg-darkgreen text-softwhite min-h-screen circuit-bg">
+    <!-- NAV -->
+    <header
+      class="sticky top-0 z-40 backdrop-blur-sm bg-darkgreen/60 border-b border-darkgreen/40"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <a href="#" class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-md bg-gradient-to-br from-darkgreen/80 to-limegreen p-1 shadow-lime-glow flex items-center justify-center"
+          >
+            <!-- simple logo mark -->
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden
+            >
+              <rect x="3" y="3" width="18" height="18" rx="4" fill="#001b12" />
+              <path
+                d="M7 13 L11 9 L17 15"
+                stroke="#a6ff00"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <span class="font-semibold tracking-tight">Omas</span>
+        </a>
+
+        <nav
+          class="hidden md:flex gap-6 transition-all duration-300 ease-out hover:scale-[1.02] items-center text-sm"
+        >
+          <a href="/index.html#services" class="hover:text-limegreen transition"
+            >Services</a
+          >
+          <a href="/courses.html" class="hover:text-limegreen transition"
+            >Courses</a
+          >
+          <a
+            href="/index.html#portfolio"
+            class="hover:text-limegreen transition"
+            >Portfolio</a
+          >
+          <a href="/about.html" class="hover:text-limegreen transition"
+            >About</a
+          >
+          <a href="/contact.html" class="hover:text-limegreen transition"
+            >Contact</a
+          >
+          <a
+            href="/enroll.html"
+            class="ml-2 px-3 py-1 rounded-md bg-limegreen/7 hover:bg-limegreen/15 text-limegreen border border-limegreen/20"
+            >Enroll</a
+          >
+        </nav>
+
+        <div class="md:hidden">
+          <button
+            id="menuBtn"
+            class="p-2 rounded-md ring-1 ring-transparent hover:ring-limegreen/30"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M4 7h16M4 12h16M4 17h16"
+                stroke="#cfeedb"
+                stroke-width="1.6"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobileMenu"
+      class="md:hidden hidden bg-darkgreen/95 border-b border-darkgreen/40"
+    >
+      <div class="px-6 py-4 space-y-3">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="about.html">About</a>
+        <a href="enroll.html" class="text-limegreen">Enroll</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <main class="max-w-4xl mx-auto px-6 py-16">
+      <header class="text-center mb-10">
+        <h1 class="text-4xl font-extrabold mb-3">Enroll in a Course</h1>
+        <p class="text-slate-300/80 max-w-xl mx-auto">
+          Fill out the short form below to secure your spot. We’ll contact you
+          within 24 hours to confirm your enrollment and guide your next steps.
+        </p>
+      </header>
+
+      <!-- GOOGLE FORM SECTION -->
+      <section
+        class="bg-darkgreen/60 border border-darkgreen/30 rounded-xl p-6 transition-all duration-300 ease-out hover:scale-[1.02] shadow-lime-glow"
+      >
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSesvsgzK_B9PkHXIOySG3RiKLoL5WR4Fgl7bT1dflcAUnUA-g/viewform?embedded=true"
+          width="100%"
+          height="1200"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          >Loading…</iframe
+        >
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-darkgreen/30 py-8 mt-12">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <div class="text-sm text-slate-300/70">
+          &copy; <span id="year"></span> Omas Labs — Practical Tech Training &
+          Systems
+        </div>
+        <div class="text-sm text-slate-300/70">
+          Built with care. Fueled by curiosity.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuBtn?.addEventListener("click", () =>
+        mobileMenu.classList.toggle("hidden")
+      );
+
+      // Auto-fill course name if query param exists
+      const params = new URLSearchParams(window.location.search);
+      const course = params.get("course");
+      if (course) {
+        const form = document.getElementById("enrollForm");
+        const url = new URL(form.src);
+        url.searchParams.set("usp", "pp_url");
+        url.searchParams.set("entry.1234567890", course); // Replace entry ID with your Google Form field ID
+        form.src = url.toString();
+      }
+    </script>
+    <script>
+      AOS.init({
+        duration: 700,
+        once: true,
+        easing: "ease-out-cubic",
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/hero.svg" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tech Training & Systems — Home</title>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind custom config for your greens
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              darkgreen: "#062018" /* very dark green */,
+              limegreen: "#a6ff00" /* lime accent */,
+              softwhite: "#e6ffee",
+            },
+            boxShadow: {
+              "lime-glow": "0 8px 30px rgba(166,255,0,0.12)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* small helper for the subtle circuit backgrou nd */
+      .circuit-bg {
+        background-image: radial-gradient(
+            circle at 10% 10%,
+            rgba(166, 255, 0, 0.03),
+            transparent 10%
+          ),
+          linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.02) 0.5px,
+            transparent 0.5px
+          );
+        background-size: 240px 240px, 8px 8px;
+      }
+    </style>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body class="antialiased bg-darkgreen text-softwhite min-h-screen">
+    <!-- NAV -->
+    <header
+      class="sticky top-0 z-40 backdrop-blur-sm bg-darkgreen/60 border-b border-darkgreen/40"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <a href="#" class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-md bg-gradient-to-br from-darkgreen/80 to-limegreen p-1 shadow-lime-glow flex items-center justify-center"
+          >
+            <!-- simple logo mark -->
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden
+            >
+              <rect x="3" y="3" width="18" height="18" rx="4" fill="#001b12" />
+              <path
+                d="M7 13 L11 9 L17 15"
+                stroke="#a6ff00"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <span class="font-semibold tracking-tight">Omas</span>
+        </a>
+
+        <nav
+          class="hidden md:flex gap-6 transition-all duration-300 ease-out hover:scale-[1.02] items-center text-sm"
+        >
+          <a href="/index.html#services" class="hover:text-limegreen transition"
+            >Services</a
+          >
+          <a href="/courses.html" class="hover:text-limegreen transition"
+            >Courses</a
+          >
+          <a
+            href="/index.html#portfolio"
+            class="hover:text-limegreen transition"
+            >Portfolio</a
+          >
+          <a href="/about.html" class="hover:text-limegreen transition"
+            >About</a
+          >
+          <a href="/contact.html" class="hover:text-limegreen transition"
+            >Contact</a
+          >
+          <a
+            href="/enroll.html"
+            class="ml-2 px-3 py-1 rounded-md bg-limegreen/7 hover:bg-limegreen/15 text-limegreen border border-limegreen/20"
+            >Enroll</a
+          >
+        </nav>
+
+        <div class="md:hidden">
+          <button
+            id="menuBtn"
+            class="p-2 rounded-md ring-1 ring-transparent hover:ring-limegreen/30"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M4 7h16M4 12h16M4 17h16"
+                stroke="#cfeedb"
+                stroke-width="1.6"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobileMenu"
+      class="md:hidden hidden bg-darkgreen/95 border-b border-darkgreen/40"
+    >
+      <div class="px-6 py-4 space-y-3">
+        <a href="/index.html#services" class="block">Services</a>
+        <a href="/courses.html" class="block">Courses</a>
+        <a href="/index.html#portfolio" class="block">Portfolio</a>
+        <a href="/about.html" class="block">About</a>
+        <a href="/contact.html" class="block">Contact</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <main class="circuit-bg">
+      <section
+        class="max-w-6xl mx-auto px-6 py-16 grid lg:grid-cols-2 gap-10 items-center"
+      >
+        <div class="space-y-6">
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+            Learn. Automate. Ship.
+          </h1>
+          <p class="text-slate-200/80 max-w-xl">
+            Practical training and custom systems for teams and individuals.
+            From beginner programming to live dashboards, hardware setup and
+            automation — we teach it, build it, and hand you the keys.
+          </p>
+
+          <div class="flex gap-3 items-center">
+            <a
+              href="#courses"
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-limegreen text-darkgreen font-semibold shadow-lime-glow hover:scale-[1.01] transition"
+            >
+              Start Learning
+            </a>
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-md ring-1 ring-limegreen/20 hover:bg-darkgreen/50 transition"
+            >
+              Request a Service
+            </a>
+          </div>
+
+          <div class="mt-4 text-xs text-slate-300/70 font-mono">
+            <span class="mr-3">&gt; Popular:</span>
+            <span class="inline-flex gap-2">
+              <span class="px-2 py-1 rounded bg-darkgreen/60"
+                >Excel Automation</span
+              >
+              <span class="px-2 py-1 rounded bg-darkgreen/60"
+                >Python Fundamentals</span
+              >
+              <span class="px-2 py-1 rounded bg-darkgreen/60"
+                >Hardware Setup</span
+              >
+            </span>
+          </div>
+        </div>
+
+        <!-- Hero visual -->
+        <div
+          class="bg-darkgreen/60 border border-darkgreen/40 rounded-2xl p-6 transition-all duration-300 ease-out hover:scale-[1.02] shadow-lime-glow"
+        >
+          <!-- mock dashboard -->
+          <div class="flex flex-col gap-4">
+            <div
+              class="h-48 rounded-lg bg-gradient-to-br from-black/10 to-darkgreen/20 p-4 grid grid-cols-3 gap-4"
+            >
+              <div class="col-span-2">
+                <div class="h-8 rounded bg-darkgreen/50 mb-3 w-3/5"></div>
+                <div class="h-2 rounded bg-darkgreen/40 mb-2 w-4/5"></div>
+                <div class="h-2 rounded bg-darkgreen/40 mb-2 w-2/3"></div>
+                <div class="mt-2 grid grid-cols-3 gap-2">
+                  <div
+                    class="h-16 rounded bg-gradient-to-b from-darkgreen/30 to-darkgreen/20 p-2"
+                  >
+                    <div class="h-2 w-4/5 rounded bg-darkgreen/40 mb-2"></div>
+                    <div class="text-sm font-semibold text-limegreen">42%</div>
+                  </div>
+                  <div
+                    class="h-16 rounded bg-gradient-to-b from-darkgreen/30 to-darkgreen/20 p-2"
+                  >
+                    <div class="h-2 w-3/4 rounded bg-darkgreen/40 mb-2"></div>
+                    <div class="text-sm font-semibold text-limegreen">18m</div>
+                  </div>
+                  <div
+                    class="h-16 rounded bg-gradient-to-b from-darkgreen/30 to-darkgreen/20 p-2"
+                  >
+                    <div class="h-2 w-1/2 rounded bg-darkgreen/40 mb-2"></div>
+                    <div class="text-sm font-semibold text-limegreen">20</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-1 flex flex-col gap-2">
+                <div class="h-8 rounded bg-darkgreen/50"></div>
+                <div class="h-8 rounded bg-darkgreen/50"></div>
+                <div class="h-8 rounded bg-darkgreen/50"></div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-3 mt-2">
+              <div
+                class="h-12 rounded bg-darkgreen/40 flex items-center justify-center text-sm"
+              >
+                Google Forms → Excel
+              </div>
+              <div
+                class="h-12 rounded bg-darkgreen/40 flex items-center justify-center text-sm"
+              >
+                Course: Excel Macros
+              </div>
+              <div
+                class="h-12 rounded bg-darkgreen/40 flex items-center justify-center text-sm"
+              >
+                Install & Setup
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="max-w-6xl mx-auto px-6 py-12">
+        <h2 class="text-2xl font-bold mb-6">What we do</h2>
+        <div
+          class="grid md:grid-cols-4 gap-6 transition-all duration-300 ease-out hover:scale-[1.02]"
+        >
+          <!-- card -->
+          <article
+            class="p-5 rounded-xl bg-darkgreen/60 border border-darkgreen/30 hover:shadow-lime-glow transition"
+          >
+            <div class="flex items-center gap-3 mb-3">
+              <div class="p-2 rounded bg-darkgreen/30">
+                <!-- icon: laptop/code -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 7h16v10H4z"
+                    stroke="#cfeedb"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8 11l2-2-2-2"
+                    stroke="#a6ff00"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M16 11l-2-2 2-2"
+                    stroke="#a6ff00"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-semibold">Programming Tutoring</h3>
+            </div>
+            <p class="text-sm text-slate-300/80 mb-3">
+              Hands-on lessons: Python, JS, Web fundamentals — practical
+              projects, not lectures.
+            </p>
+            <div class="text-xs text-slate-300/70">
+              1:1 & group classes · certificate
+            </div>
+          </article>
+
+          <article
+            class="p-5 rounded-xl bg-darkgreen/60 border border-darkgreen/30 hover:shadow-lime-glow transition"
+          >
+            <div class="flex items-center gap-3 mb-3">
+              <div class="p-2 rounded bg-darkgreen/30">
+                <!-- icon: spreadsheet -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <rect
+                    x="3"
+                    y="4"
+                    width="18"
+                    height="16"
+                    rx="2"
+                    stroke="#cfeedb"
+                    stroke-width="1.4"
+                  />
+                  <path
+                    d="M8 8h8M8 12h8M8 16h8"
+                    stroke="#a6ff00"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-semibold">Microsoft Office</h3>
+            </div>
+            <p class="text-sm text-slate-300/80 mb-3">
+              Excel automation, PowerPoint that doesn't suck, Word for pros.
+            </p>
+            <div class="text-xs text-slate-300/70">
+              Beginner → Advanced · Macros & dashboards
+            </div>
+          </article>
+
+          <article
+            class="p-5 rounded-xl bg-darkgreen/60 border border-darkgreen/30 hover:shadow-lime-glow transition"
+          >
+            <div class="flex items-center gap-3 mb-3">
+              <div class="p-2 rounded bg-darkgreen/30">
+                <!-- icon: hardware -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 7h16v10H4z" stroke="#cfeedb" stroke-width="1.4" />
+                  <path
+                    d="M9 12h6"
+                    stroke="#a6ff00"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-semibold">Hardware & Install</h3>
+            </div>
+            <p class="text-sm text-slate-300/80 mb-3">
+              Setups, repairs, installations — desktops, peripherals, networks.
+            </p>
+            <div class="text-xs text-slate-300/70">
+              On-site & remote support
+            </div>
+          </article>
+
+          <article
+            class="p-5 rounded-xl bg-darkgreen/60 border border-darkgreen/30 hover:shadow-lime-glow transition"
+          >
+            <div class="flex items-center gap-3 mb-3">
+              <div class="p-2 rounded bg-darkgreen/30">
+                <!-- icon: integration -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M3 6h6v6H3zM15 12h6v6h-6zM9 3h6v6H9z"
+                    stroke="#cfeedb"
+                    stroke-width="1.4"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-semibold">Custom Integrations</h3>
+            </div>
+            <p class="text-sm text-slate-300/80 mb-3">
+              Google Forms → Live Excel, dashboards, scripts, automation
+              pipelines.
+            </p>
+            <div class="text-xs text-slate-300/70">
+              APIs · Scripts · Dashboards
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- COURSES -->
+      <section id="courses" class="max-w-6xl mx-auto px-6 py-12">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold">Courses</h2>
+          <div class="text-sm text-slate-300/70">
+            Self-paced · Live workshops · Certs
+          </div>
+        </div>
+
+        <div
+          class="grid md:grid-cols-3 gap-6 transition-all duration-300 ease-out hover:scale-[1.02]"
+        >
+          <div
+            class="p-5 rounded-xl bg-darkgreen/60 border border-darkgreen/30"
+          >
+            <div class="flex justify-between items-start">
+              <h3 class="font-semibold">Excel Automation</h3>
+              <div class="text-xs text-slate-300/70">4 weeks</div>
+            </div>
+            <p class="mt-3 text-sm text-slate-300/80">
+              Dashboards, formulas, Power Query, macros and Google Forms
+              integrations.
+            </p>
+            <div class="mt-4 flex gap-2 items-center">
+              <a
+                href="#enroll"
+                class="text-sm px-3 py-1 rounded bg-limegreen/7 border border-limegreen/20"
+                >Enroll</a
+              >
+              <div class="text-xs text-slate-300/60">
+                Beginner → Intermediate
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="p-5 rounded-xl bg-darkgreen/60 border border-darkgreen/30"
+          >
+            <div class="flex justify-between items-start">
+              <h3 class="font-semibold">Python for Projects</h3>
+              <div class="text-xs text-slate-300/70">6 weeks</div>
+            </div>
+            <p class="mt-3 text-sm text-slate-300/80">
+              Build scripts, small web tools, and automations — project-focused.
+            </p>
+            <div class="mt-4 flex gap-2 items-center">
+              <a
+                href="#enroll"
+                class="text-sm px-3 py-1 rounded bg-limegreen/7 border border-limegreen/20"
+                >Enroll</a
+              >
+              <div class="text-xs text-slate-300/60">Hands-on labs</div>
+            </div>
+          </div>
+
+          <div
+            class="p-5 rounded-xl bg-darkgreen/60 border border-darkgreen/30"
+          >
+            <div class="flex justify-between items-start">
+              <h3 class="font-semibold">Hardware Fundamentals</h3>
+              <div class="text-xs text-slate-300/70">2 weeks</div>
+            </div>
+            <p class="mt-3 text-sm text-slate-300/80">
+              Setup, diagnose and maintain hardware — practical skills, no
+              fluff.
+            </p>
+            <div class="mt-4 flex gap-2 items-center">
+              <a
+                href="#enroll"
+                class="text-sm px-3 py-1 rounded bg-limegreen/7 border border-limegreen/20"
+                >Enroll</a
+              >
+              <div class="text-xs text-slate-300/60">Lab sessions</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section id="portfolio" class="max-w-6xl mx-auto px-6 py-12">
+        <h2 class="text-2xl font-bold mb-6">Selected Work</h2>
+        <div
+          class="grid md:grid-cols-3 gap-6 transition-all duration-300 ease-out hover:scale-[1.02]"
+        >
+          <div
+            class="rounded-xl overflow-hidden bg-darkgreen/60 border border-darkgreen/30"
+          >
+            <div class="p-4">
+              <h4 class="font-semibold mb-1">Attendance Dashboard</h4>
+              <p class="text-sm text-slate-300/80">
+                Google Forms → Live Excel → Power BI-like dashboard. Real-time
+                attendance for 500+ students.
+              </p>
+            </div>
+            <div
+              class="h-36 bg-gradient-to-br from-black/20 to-darkgreen/20"
+            ></div>
+          </div>
+          <div
+            class="rounded-xl overflow-hidden bg-darkgreen/60 border border-darkgreen/30"
+          >
+            <div class="p-4">
+              <h4 class="font-semibold mb-1">Automated Reports</h4>
+              <p class="text-sm text-slate-300/80">
+                Weekly sales pipeline automation & email delivery — saved 6
+                hours/week.
+              </p>
+            </div>
+            <div
+              class="h-36 bg-gradient-to-br from-black/20 to-darkgreen/20"
+            ></div>
+          </div>
+          <div
+            class="rounded-xl overflow-hidden bg-darkgreen/60 border border-darkgreen/30"
+          >
+            <div class="p-4">
+              <h4 class="font-semibold mb-1">Training Bootcamp</h4>
+              <p class="text-sm text-slate-300/80">
+                Custom bootcamp for an NGO — trainees shipped a live tool at the
+                end of week 3.
+              </p>
+            </div>
+            <div
+              class="h-36 bg-gradient-to-br from-black/20 to-darkgreen/20"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="max-w-6xl mx-auto px-6 py-12">
+        <h2 class="text-2xl font-bold mb-6">What clients say</h2>
+        <div
+          class="grid md:grid-cols-3 gap-6 transition-all duration-300 ease-out hover:scale-[1.02]"
+        >
+          <blockquote
+            class="p-5 rounded-xl bg-darkgreen/60 border border-darkgreen/30"
+          >
+            <p class="text-sm text-slate-300/80">
+              “They turned our chaotic forms into a single live dashboard. Now
+              we actually have time to think.”
+            </p>
+            <footer class="mt-3 text-xs text-slate-300/60">
+              — Ada, Program Manager
+            </footer>
+          </blockquote>
+
+          <blockquote
+            class="p-5 rounded-xl bg-darkgreen/60 border border-darkgreen/30"
+          >
+            <p class="text-sm text-slate-300/80">
+              “Clear teaching, compact projects — I built something real in week
+              2.”
+            </p>
+            <footer class="mt-3 text-xs text-slate-300/60">
+              — Musa, Trainee
+            </footer>
+          </blockquote>
+
+          <blockquote
+            class="p-5 rounded-xl bg-darkgreen/60 border border-darkgreen/30"
+          >
+            <p class="text-sm text-slate-300/80">
+              “On-site install next-level. Fast, tidy, and didn't overcharge.”
+            </p>
+            <footer class="mt-3 text-xs text-slate-300/60">
+              — Comfort, Small Business Owner
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="max-w-6xl mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+          <div>
+            <h2 class="text-2xl font-bold mb-4">Talk to us</h2>
+            <p class="text-sm text-slate-300/80 mb-6">
+              Tell us what you need — a quick note is fine. We reply within a
+              business day (usually sooner).
+            </p>
+
+            <div class="space-y-4 text-sm">
+              <div class="flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M3 8v10a2 2 0 0 0 2 2h14"
+                    stroke="#cfeedb"
+                    stroke-width="1.4"
+                  />
+                </svg>
+                <div>On-site & Remote</div>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M21 10c0 6-9 11-9 11s-9-5-9-11a9 9 0 0 1 18 0z"
+                    stroke="#cfeedb"
+                    stroke-width="1.4"
+                  />
+                </svg>
+                <div>Lagos, Nigeria (remote worldwide)</div>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M2 3h20v6H2z" stroke="#cfeedb" stroke-width="1.4" />
+                </svg>
+                <div>Email: hello@greencircuit.example</div>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <a
+                href="https://wa.me/2348012345678"
+                target="_blank"
+                class="inline-flex items-center gap-3 px-4 py-2 rounded-md bg-limegreen text-darkgreen font-semibold shadow-lime-glow"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M21 12A9 9 0 1 0 3 12a9 9 0 0 0 18 0z"
+                    stroke="#002b1a"
+                    stroke-width="1.2"
+                  />
+                  <path
+                    d="M7 12c1.5 3 4 4 7 4"
+                    stroke="#002b1a"
+                    stroke-width="1.2"
+                  />
+                </svg>
+                Message on WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact form (demo only) -->
+          <section id="contact" class="bg-[#011b12] text-[#e6ffee] py-20 px-6">
+            <div class="max-w-4xl mx-auto text-center">
+              <h2 class="text-3xl font-bold text-lime-400 mb-4">
+                Get In Touch
+              </h2>
+              <p class="text-gray-400 mb-8">
+                Have a project in mind or want to enroll in a course? Fill the
+                form below — we'll get back to you soon.
+              </p>
+
+              <div
+                class="rounded-2xl overflow-hidden shadow-lg shadow-lime-500/10 border border-lime-500/20 bg-[#012b1c]"
+              >
+                <iframe
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSesvsgzK_B9PkHXIOySG3RiKLoL5WR4Fgl7bT1dflcAUnUA-g/viewform?embedded=true"
+                  width="640"
+                  height="824"
+                  frameborder="0"
+                  marginheight="0"
+                  marginwidth="0"
+                  >Loading…</iframe
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="border-t border-darkgreen/30 py-8 mt-8">
+        <div
+          class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <div class="text-sm text-slate-300/70">
+            &copy; <span id="year"></span> GreenCircuit Labs — Practical tech
+            training & systems
+          </div>
+          <div class="text-sm text-slate-300/70">
+            Built with care. Powered by coffee and stubbornness.
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Minimal JS -->
+    <script>
+      // splash hide after short delay
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          const splash = document.getElementById("splash");
+          if (splash) splash.style.display = "none";
+        }, 900); // quick flash
+      });
+
+      // mobile menu
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuBtn?.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // contact form: demo behavior (no real backend)
+      const form = document.getElementById("contactForm");
+      const status = document.getElementById("formStatus");
+      form?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        status.textContent = "Sending...";
+        setTimeout(() => {
+          status.textContent = "Message sent. We will reply via email.";
+          form.reset();
+        }, 700);
+      });
+
+      // footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script>
+      AOS.init({
+        duration: 700,
+        once: true,
+        easing: "ease-out-cubic",
+      });
+    </script>
+  </body>
+</html>
