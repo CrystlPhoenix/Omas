@@ -139,111 +139,99 @@
 
     <!-- HERO -->
     <main class="circuit-bg">
-      <section
-        class="max-w-6xl mx-auto px-6 py-16 grid lg:grid-cols-2 gap-10 items-center"
+      <!-- HERO -->
+<main class="relative overflow-hidden circuit-bg">
+  <!-- Subtle glow orb -->
+  <div class="absolute inset-0 bg-gradient-to-br from-limegreen/10 via-transparent to-transparent blur-3xl"></div>
+
+  <section
+    class="relative max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-12 items-center"
+  >
+    <!-- Left: Text -->
+    <div
+      class="space-y-8"
+      data-aos="fade-right"
+    >
+      <h1
+        class="text-5xl md:text-6xl font-extrabold leading-tight text-softwhite"
       >
-        <div class="space-y-6">
-          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
-            Learn. Automate. Ship.
-          </h1>
-          <p class="text-slate-200/80 max-w-xl">
-            Practical training and custom systems for teams and individuals.
-            From beginner programming to live dashboards, hardware setup and
-            automation — we teach it, build it, and hand you the keys.
-          </p>
+        Power your <span class="text-limegreen">skills</span>.  
+        Automate your <span class="text-limegreen">workflow</span>.
+      </h1>
 
-          <div class="flex gap-3 items-center">
-            <a
-              href="#courses"
-              class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-limegreen text-darkgreen font-semibold shadow-lime-glow hover:scale-[1.01] transition"
-            >
-              Start Learning
-            </a>
-            <a
-              href="#contact"
-              class="inline-flex items-center gap-2 px-4 py-2 rounded-md ring-1 ring-limegreen/20 hover:bg-darkgreen/50 transition"
-            >
-              Request a Service
-            </a>
-          </div>
+      <p class="text-slate-300/80 max-w-lg text-lg leading-relaxed">
+        We train people and build tools that make work faster, smarter, and a lot less painful. Learn coding, automation, and tech systems that actually *do* something.
+      </p>
 
-          <div class="mt-4 text-xs text-slate-300/70 font-mono">
-            <span class="mr-3">&gt; Popular:</span>
-            <span class="inline-flex gap-2">
-              <span class="px-2 py-1 rounded bg-darkgreen/60"
-                >Excel Automation</span
-              >
-              <span class="px-2 py-1 rounded bg-darkgreen/60"
-                >Python Fundamentals</span
-              >
-              <span class="px-2 py-1 rounded bg-darkgreen/60"
-                >Hardware Setup</span
-              >
-            </span>
-          </div>
-        </div>
-
-        <!-- Hero visual -->
-        <div
-          class="bg-darkgreen/60 border border-darkgreen/40 rounded-2xl p-6 transition-all duration-300 ease-out hover:scale-[1.02] shadow-lime-glow"
+      <div class="flex flex-wrap gap-4">
+        <a
+          href="#courses"
+          class="px-6 py-3 rounded-md bg-limegreen text-darkgreen font-semibold shadow-lime-glow hover:scale-[1.02] transition-transform"
         >
-          <!-- mock dashboard -->
-          <div class="flex flex-col gap-4">
-            <div
-              class="h-48 rounded-lg bg-gradient-to-br from-black/10 to-darkgreen/20 p-4 grid grid-cols-3 gap-4"
-            >
-              <div class="col-span-2">
-                <div class="h-8 rounded bg-darkgreen/50 mb-3 w-3/5"></div>
-                <div class="h-2 rounded bg-darkgreen/40 mb-2 w-4/5"></div>
-                <div class="h-2 rounded bg-darkgreen/40 mb-2 w-2/3"></div>
-                <div class="mt-2 grid grid-cols-3 gap-2">
-                  <div
-                    class="h-16 rounded bg-gradient-to-b from-darkgreen/30 to-darkgreen/20 p-2"
-                  >
-                    <div class="h-2 w-4/5 rounded bg-darkgreen/40 mb-2"></div>
-                    <div class="text-sm font-semibold text-limegreen">42%</div>
-                  </div>
-                  <div
-                    class="h-16 rounded bg-gradient-to-b from-darkgreen/30 to-darkgreen/20 p-2"
-                  >
-                    <div class="h-2 w-3/4 rounded bg-darkgreen/40 mb-2"></div>
-                    <div class="text-sm font-semibold text-limegreen">18m</div>
-                  </div>
-                  <div
-                    class="h-16 rounded bg-gradient-to-b from-darkgreen/30 to-darkgreen/20 p-2"
-                  >
-                    <div class="h-2 w-1/2 rounded bg-darkgreen/40 mb-2"></div>
-                    <div class="text-sm font-semibold text-limegreen">20</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-span-1 flex flex-col gap-2">
-                <div class="h-8 rounded bg-darkgreen/50"></div>
-                <div class="h-8 rounded bg-darkgreen/50"></div>
-                <div class="h-8 rounded bg-darkgreen/50"></div>
-              </div>
-            </div>
+          Start Learning
+        </a>
+        <a
+          href="#contact"
+          class="px-6 py-3 rounded-md ring-1 ring-limegreen/30 hover:bg-limegreen/10 text-limegreen transition"
+        >
+          Request a Service
+        </a>
+      </div>
 
-            <div class="grid grid-cols-3 gap-3 mt-2">
-              <div
-                class="h-12 rounded bg-darkgreen/40 flex items-center justify-center text-sm"
-              >
-                Google Forms → Excel
+      <div class="pt-4 text-xs font-mono text-slate-400/80">
+        <span class="mr-3 text-limegreen">&gt;</span> Excel Automation · Python Projects · Live Dashboards
+      </div>
+    </div>
+
+    <!-- Right: Visual -->
+    <div
+      class="relative"
+      data-aos="fade-left"
+    >
+      <div
+        class="relative bg-darkgreen/60 backdrop-blur-md border border-limegreen/10 rounded-2xl p-6 shadow-lime-glow hover:shadow-lime-glow/40 transition"
+      >
+        <div class="absolute -top-6 -right-6 w-24 h-24 bg-limegreen/10 rounded-full blur-3xl"></div>
+
+        <!-- Mock dashboard visual -->
+        <div class="grid grid-cols-3 gap-4">
+          <div class="col-span-2 space-y-3">
+            <div class="h-8 w-3/5 bg-darkgreen/50 rounded"></div>
+            <div class="h-2 w-4/5 bg-darkgreen/40 rounded"></div>
+            <div class="h-2 w-2/3 bg-darkgreen/40 rounded"></div>
+            <div class="grid grid-cols-3 gap-2 pt-3">
+              <div class="bg-darkgreen/40 p-2 rounded">
+                <div class="h-2 w-3/4 bg-darkgreen/50 rounded mb-2"></div>
+                <div class="text-sm font-semibold text-limegreen">42%</div>
               </div>
-              <div
-                class="h-12 rounded bg-darkgreen/40 flex items-center justify-center text-sm"
-              >
-                Course: Excel Macros
+              <div class="bg-darkgreen/40 p-2 rounded">
+                <div class="h-2 w-2/3 bg-darkgreen/50 rounded mb-2"></div>
+                <div class="text-sm font-semibold text-limegreen">18m</div>
               </div>
-              <div
-                class="h-12 rounded bg-darkgreen/40 flex items-center justify-center text-sm"
-              >
-                Install & Setup
+              <div class="bg-darkgreen/40 p-2 rounded">
+                <div class="h-2 w-1/2 bg-darkgreen/50 rounded mb-2"></div>
+                <div class="text-sm font-semibold text-limegreen">20</div>
               </div>
             </div>
           </div>
+
+          <div class="col-span-1 flex flex-col gap-3">
+            <div class="h-8 bg-darkgreen/50 rounded"></div>
+            <div class="h-8 bg-darkgreen/50 rounded"></div>
+            <div class="h-8 bg-darkgreen/50 rounded"></div>
+          </div>
         </div>
-      </section>
+
+        <div class="grid grid-cols-3 gap-3 mt-6 text-xs text-center">
+          <div class="bg-darkgreen/50 py-3 rounded">Excel → Sheets</div>
+          <div class="bg-darkgreen/50 py-3 rounded">Python Macros</div>
+          <div class="bg-darkgreen/50 py-3 rounded">Hardware Setup</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
 
       <!-- SERVICES -->
       <section id="services" class="max-w-6xl mx-auto px-6 py-12">
